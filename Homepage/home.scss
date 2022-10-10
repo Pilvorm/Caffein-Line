@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+
+$main-color: #1A1A1A;
+$accent-color: burlywood;
+$section-height: 800px;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $main-color;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $accent-color;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    border-radius: 0;
+    background-image: -webkit-gradient(linear, 0 0, 0 100%,
+            color-stop(.5, rgba(255, 255, 255, .2)),
+            color-stop(.5, transparent), to(transparent));
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: $main-color;
+    font-family: 'Julius Sans One', sans-serif;
+    transition: all 0.3s ease;
+
+    a {
+        color: white;
+        text-decoration: none;
+        padding: 25px 65px;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $accent-color;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    .current-nav {
+        border-bottom: 1px solid $accent-color;
+    }
+
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: $section-height;
+    background-image:
+        linear-gradient(45deg,
+            transparent,
+            rgba(42, 50, 46, 0.5)),
+        url('assets/heroImg.jpg');
+    background-size: cover;
+
+    img {
+        width: 50vw;
+    }
+}
+
+#about {
+    .about {
+        width: 100%;
+        background-attachment: fixed;
+        height: $section-height;
+        display: flex;
+        align-items: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .about-info {
+        display: flex;
+        flex-direction: column;
+        max-width: 45%;
+        margin: 5%;
+        padding: 0 20px;
+        gap: 25px;
+
+        h2 {
+            font-size: 46px;
+            font-weight: 400;
+        }
+
+        p {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+    }
+
+    .about-1 {
+        background-image: url('assets/about1.jpeg');
+        background-size: cover;
+
+        .about-info-1 {
+            color: white;
+            text-align: justify;
+            text-justify: inter-word;
+            border-left: 2.5px solid white;
+        }
+    }
+
+    .about-2 {
+        background-image: url('assets/about2v2.jpg');
+        background-size: cover;
+        justify-content: flex-end;
+
+        .about-info-2 {
+            color: black;
+            text-align: right;
+            border-right: 2.5px solid black;
+        }
+    }
+
+}
