@@ -109,4 +109,23 @@ nav .current-nav {
   color: black;
   text-align: right;
   border-right: 2.5px solid black;
+}
+
+#event {
+  width: 100%;
+  height: 800px;
+}
+#event .swiper, #event .swiper-wrapper, #event .swiper-slide {
+  width: 100%;
+  height: 800px;
+}
+#event .event-1 {
+  background-image: url("assets/event1.jpg");
+}
+#event .event-2 {
+  background-image: url("assets/event2.jpg");
+  background-size: 100%;
+}
+#event .event-3 {
+  background-image: url("assets/event3.jpg");
 }/*# sourceMappingURL=home.css.map */

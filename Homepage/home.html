@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,9 @@
     <title>Caffein Line</title>
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 </head>
+
 <body>
     <nav id="navbar">
         <a href="" class="current-nav">HOME</a>
@@ -26,19 +29,55 @@
         <div class="about about-1">
             <div class="about-info about-info-1">
                 <h2>Caffein Line</h2>
-                <p>is an online cafe based in Indonesia. We provide the best beverages and desserts with the best quality of ingredients and we make sure everything is kept well and fresh.</p>
+                <p>is an online cafe based in Indonesia. We provide the best beverages and desserts with the best
+                    quality of ingredients and we make sure everything is kept well and fresh.</p>
             </div>
         </div>
 
         <div class="about about-2">
             <div class="about-info about-info-2">
                 <h2>Our Menu</h2>
-                <p>Refresh yourself with our homemade coffee, tea, and delicious desserts. All made with carefully chosen ingredients to give you the best experience</p>
+                <p>Refresh yourself with our homemade coffee, tea, and delicious desserts. All made with carefully
+                    chosen ingredients to give you the best experience</p>
             </div>
+        </div>
+    </div>
+
+    <div id="event">
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide event-1">Slide 1</div>
+                <div class="swiper-slide event-2">Slide 2</div>
+                <div class="swiper-slide event-3">Slide 3</div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
         </div>
     </div>
 
     <script src="home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            speed: 1000,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    // return '<span class="' + className + ' test' + '">' + (index + 1) + '</span>';
+                    return '<span class="' + className + ' test' + '"></span>';
+                },
+            }
+        });
+    </script>
 </body>
+
 </html>

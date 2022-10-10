@@ -134,5 +134,28 @@ nav {
             border-right: 2.5px solid black;
         }
     }
+}
 
+#event {
+
+    width: 100%;
+    height: $section-height;
+    
+    .swiper, .swiper-wrapper, .swiper-slide {
+        width: 100%;
+        height: $section-height;
+    }
+
+    .event-1 {
+        background-image: url('assets/event1.jpg');
+    }
+
+    .event-2 {
+        background-image: url('assets/event2.jpg');
+        background-size: 100%;
+    }
+
+    .event-3 {
+        background-image: url('assets/event3.jpg');
+    }
 }
