@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caffein Line</title>
     <link rel="stylesheet" href="home.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -15,11 +21,32 @@
 
 <body>
     <nav id="navbar">
-        <a href="" class="current-nav">HOME</a>
-        <a href="">ABOUT</a>
-        <a href="">SHOP</a>
-        <a href="">EVENT</a>
-        <a href="">CONTACT</a>
+        <a href="" class="current-nav nav-wide">HOME</a>
+        <a href="" class="nav-wide">ABOUT</a>
+        <a href="" class="nav-wide">SHOP</a>
+        <a href="" class="nav-wide">EVENT</a>
+        <a href="" class="nav-wide">CONTACT</a>
+
+        <div class="navbar-logo">
+            <img src="assets/logo.png" alt="">
+        </div>
+        <button
+            class="block"
+            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"><i class="bi bi-list"></i></button>
+
+        <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-[#1A1A1A] invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-white top-0 right-0 border-none w-96"
+            tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header flex items-center justify-between">
+                <img src="assets/logo.png" alt="">
+                <button type="button"
+                    class="btn-close box-content"
+                    data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
+            </div>
+            <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
+                ...
+            </div>
+        </div>
     </nav>
 
     <div id="hero">
@@ -49,9 +76,15 @@
     <div id="event">
         <div class="swiper">
             <div class="swiper-wrapper">
-                <div class="swiper-slide event-1"><p>FREE DELIVERY WEEK<br>NO MINIMUM TRANSACTION REQUIRED</p></div>
-                <div class="swiper-slide event-2"><p>BUY 2<br>GET 1 FREE</p></div>
-                <div class="swiper-slide event-3"><p>FOLLOW OUR SOCIALS TO GET A 10% DISCOUNT</p></div>
+                <div class="swiper-slide event-1">
+                    <p>FREE DELIVERY WEEK<br>NO MINIMUM TRANSACTION REQUIRED</p>
+                </div>
+                <div class="swiper-slide event-2">
+                    <p>BUY 2<br>GET 1 FREE</p>
+                </div>
+                <div class="swiper-slide event-3">
+                    <p>FOLLOW OUR SOCIALS TO GET A 10% DISCOUNT</p>
+                </div>
             </div>
 
             <div class="swiper-pagination"></div>
@@ -61,14 +94,15 @@
 
         </div>
     </div>
-    
-    <footer>
+
+    <!-- <footer>
         <div class="footer-wrapper">
             <div class="footer-desc">
                 <div class="footer-desc-top">
-                    <img src="assets/logo.png" alt="">
-                    <p>Caffein Line is an online cafe based in Indonesia. We provide the best beverages and desserts with the best
-                    quality of ingredients and we make sure everything is kept well and fresh.</p>
+                    <a href="#"><img src="assets/logo.png" alt=""></a>
+                    <p>Caffein Line is an online cafe based in Indonesia. We provide the best beverages and desserts
+                        with the best
+                        quality of ingredients and we make sure everything is kept well and fresh.</p>
                 </div>
                 <div class="location">
                     <i class="bi bi-geo-alt"></i>
@@ -98,18 +132,19 @@
             <div class="socials">
                 <p class="footer-header">Our Socials</p>
                 <div class="social-list">
-                    <a href=""><i class="bi bi-instagram"></i>  @caffeinline</a></i>
-                    <a href=""><i class="bi bi-twitter"></i>  @caffeinline</a>
-                    <a href=""><i class="bi bi-youtube"></i>  Caffein Line</a>
+                    <a href=""><i class="bi bi-instagram"></i> @caffeinline</a></i>
+                    <a href=""><i class="bi bi-twitter"></i> @caffeinline</a>
+                    <a href=""><i class="bi bi-youtube"></i> Caffein Line</a>
 
                 </div>
             </div>
         </div>
 
-        <p class="copyright">&copy; 2021 Caffein Line</p>
-    </footer>
+        <p class="copyright">&copy; 2021 Caffein Line. All rights reserved</p>
+    </footer> -->
 
     <script src="home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {

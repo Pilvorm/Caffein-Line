@@ -66,6 +66,10 @@ nav {
         border-bottom: 1px solid $accent-color;
     }
 
+    .navbar-logo, button {
+        display: none !important;
+    }
+
 }
 
 #hero {
@@ -344,3 +348,63 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1025px) {
+    nav {
+        a {
+            padding: calc(25px / 1.2) calc(65px / 1.4);
+        }
+    }
+}
+
+@media only screen and (max-width: 769px) {
+    nav {
+        a {
+            padding: calc(25px / 1.2) calc(65px / 1.6);
+        }
+    }
+}
+
+@media only screen and (max-width: 641px) {
+    nav {
+        justify-content: space-between;
+
+        .nav-wide {
+            display: none;
+        }
+
+        button, .offcanvas-header {
+            padding: calc(25px / 1.2) calc(65px / 1.6);
+        }
+
+        .navbar-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30%;
+            display: block !important;
+            object-fit: contain;
+            height: auto;
+            margin: calc(25px / 1.2) calc(65px / 1.6);
+
+            img {
+                width: 100%;
+            }
+        }
+
+        button {
+            font-size: 24px !important;
+            color: $accent-color !important;
+            display: inline-block !important;
+        }
+
+        .offcanvas {
+            img {
+                width: 186px;
+            }
+
+            button {
+                color: $accent-color !important;
+            }
+        }
+    }
+}

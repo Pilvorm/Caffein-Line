@@ -56,6 +56,9 @@ nav a:hover {
 nav .current-nav {
   border-bottom: 1px solid burlywood;
 }
+nav .navbar-logo, nav button {
+  display: none !important;
+}
 
 #hero {
   display: flex;
@@ -279,4 +282,51 @@ footer .copyright {
   margin: 50px 0;
   text-align: center;
   font-weight: 300;
+}
+
+@media only screen and (max-width: 1025px) {
+  nav a {
+    padding: 20.8333333333px 46.4285714286px;
+  }
+}
+@media only screen and (max-width: 769px) {
+  nav a {
+    padding: 20.8333333333px 40.625px;
+  }
+}
+@media only screen and (max-width: 641px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .nav-wide {
+    display: none;
+  }
+  nav button, nav .offcanvas-header {
+    padding: 20.8333333333px 40.625px;
+  }
+  nav .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    display: block !important;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: auto;
+    margin: 20.8333333333px 40.625px;
+  }
+  nav .navbar-logo img {
+    width: 100%;
+  }
+  nav button {
+    font-size: 24px !important;
+    color: burlywood !important;
+    display: inline-block !important;
+  }
+  nav .offcanvas img {
+    width: 186px;
+  }
+  nav .offcanvas button {
+    color: burlywood !important;
+  }
 }/*# sourceMappingURL=home.css.map */
