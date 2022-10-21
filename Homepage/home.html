@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="home.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -30,21 +31,24 @@
         <div class="navbar-logo">
             <img src="assets/logo.png" alt="">
         </div>
-        <button
-            class="block"
-            type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"><i class="bi bi-list"></i></button>
+        <button class="block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"><i class="bi bi-list list-button"></i></button>
 
         <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-[#1A1A1A] invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-white top-0 right-0 border-none w-96"
             tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
             <div class="offcanvas-header flex items-center justify-between">
                 <img src="assets/logo.png" alt="">
-                <button type="button"
-                    class="btn-close box-content"
-                    data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
+                <button type="button" class="btn-close box-content" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                        class="bi bi-x x-button"></i></button>
             </div>
             <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
-                ...
+                <ul>
+                    <a href="" class="current-nav">HOME</a>
+                    <a href="" class="">ABOUT</a>
+                    <a href="" class="">SHOP</a>
+                    <a href="" class="">EVENT</a>
+                    <a href="" class="">CONTACT</a>
+                </ul>
             </div>
         </div>
     </nav>

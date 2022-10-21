@@ -56,7 +56,8 @@ nav a:hover {
 nav .current-nav {
   border-bottom: 1px solid burlywood;
 }
-nav .navbar-logo, nav button {
+nav .navbar-logo,
+nav button {
   display: none !important;
 }
 
@@ -120,7 +121,7 @@ nav .navbar-logo, nav button {
   color: white;
   background-color: black;
   width: 30%;
-  padding: 8px 0;
+  padding: 12px 0;
   font-size: 24px;
   text-align: center;
   text-decoration: none;
@@ -284,25 +285,61 @@ footer .copyright {
   font-weight: 300;
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1280px) {
+  #about .about-2 .about-info-2 a {
+    width: 35%;
+    font-size: 24px;
+  }
+}
+@media only screen and (max-width: 1024px) {
   nav a {
     padding: 20.8333333333px 46.4285714286px;
   }
+  #about .about-2 .about-info-2 a {
+    width: 47.5%;
+  }
 }
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
   nav a {
     padding: 20.8333333333px 40.625px;
   }
+  #hero {
+    background-position: right;
+    background-image: linear-gradient(45deg, transparent, rgba(42, 50, 46, 0.7)), url("assets/heroImg.jpg");
+  }
+  #about .about-info {
+    max-width: 55%;
+  }
+  #about .about-info h2 {
+    font-size: 36px;
+  }
+  #about .about-info p {
+    font-size: 26px;
+  }
+  #about .about-1 {
+    background-position: 20% center;
+  }
+  #about .about-2 {
+    background-image: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.5)), url("assets/about2V2.jpg");
+    background-position: top;
+  }
+  #about .about-2 .about-info-2 a {
+    width: 50%;
+    font-size: 24px;
+  }
 }
-@media only screen and (max-width: 641px) {
+@media only screen and (max-width: 640px) {
   nav {
     justify-content: space-between;
   }
   nav .nav-wide {
     display: none;
   }
-  nav button, nav .offcanvas-header {
+  nav .list-button {
     padding: 20.8333333333px 40.625px;
+  }
+  nav .offcanvas-header {
+    padding: 20.8333333333px 16px;
   }
   nav .navbar-logo {
     display: flex;
@@ -319,7 +356,7 @@ footer .copyright {
     width: 100%;
   }
   nav button {
-    font-size: 24px !important;
+    font-size: 24px;
     color: burlywood !important;
     display: inline-block !important;
   }
@@ -328,5 +365,50 @@ footer .copyright {
   }
   nav .offcanvas button {
     color: burlywood !important;
+    font-size: 36px;
+  }
+  nav .offcanvas-body ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .offcanvas-body ul a {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  #hero {
+    background-image: linear-gradient(45deg, transparent, rgba(42, 50, 46, 0.85)), url("assets/heroImg.jpg");
+  }
+  #hero img {
+    width: 70vw;
+  }
+  #about .about-info {
+    max-width: 100%;
+    padding: 25px 20px;
+    gap: 25px;
+  }
+  #about .about-info h2 {
+    font-size: 40px;
+  }
+  #about .about-info p {
+    font-size: 24px;
+  }
+  #about .about-1 {
+    background-size: cover;
+    background-position: 45% center;
+  }
+  #about .about-1 .about-info-1 {
+    text-align: center;
+    border-left: none;
+    border-bottom: 2.5px solid white;
+  }
+  #about .about-2 .about-info-2 {
+    color: black;
+    text-align: center;
+    border-right: none;
+    border-bottom: 2.5px solid black;
+  }
+  #about .about-2 .about-info-2 a {
+    text-align: center;
+    align-self: center;
   }
 }/*# sourceMappingURL=home.css.map */

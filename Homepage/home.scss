@@ -66,7 +66,8 @@ nav {
         border-bottom: 1px solid $accent-color;
     }
 
-    .navbar-logo, button {
+    .navbar-logo,
+    button {
         display: none !important;
     }
 
@@ -145,7 +146,7 @@ nav {
                 color: white;
                 background-color: black;
                 width: 30%;
-                padding: 8px 0;
+                padding: 12px 0;
                 font-size: 24px;
                 text-align: center;
                 text-decoration: none;
@@ -236,10 +237,10 @@ nav {
 
     .event-3 {
         background-image:
-        linear-gradient(45deg,
-            transparent,
-            rgba(42, 50, 46, 0.2)),
-        url('assets/event3.jpg');
+            linear-gradient(45deg,
+                transparent,
+                rgba(42, 50, 46, 0.2)),
+            url('assets/event3.jpg');
         background-position: center;
         font-size: 54px;
         line-height: 1.8;
@@ -348,23 +349,89 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1280px) {
+    #about {
+        .about-2 {
+            .about-info-2 {
+                a {
+                    width: 35%;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
     nav {
         a {
             padding: calc(25px / 1.2) calc(65px / 1.4);
         }
     }
+
+    #about {
+        .about-2 {
+            .about-info-2 {
+                a {
+                    width: 47.5%;
+                }
+            }
+        }
+    }
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (max-width: 768px) {
     nav {
         a {
             padding: calc(25px / 1.2) calc(65px / 1.6);
         }
     }
+
+    #hero {
+        background-position: right;
+        background-image:
+            linear-gradient(45deg,
+                transparent,
+                rgba(42, 50, 46, 0.7)),
+            url('assets/heroImg.jpg');
+    }
+
+    #about {
+        .about-info {
+            max-width: 55%;
+
+            h2 {
+                font-size: 36px;
+            }
+
+            p {
+                font-size: 26px;
+            }
+        }
+
+        .about-1 {
+            background-position: 20% center;
+        }
+
+        .about-2 {
+            background-image:
+                linear-gradient(45deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.5)),
+                url('assets/about2V2.jpg');
+            background-position: top;
+
+            .about-info-2 {
+                a {
+                    width: 50%;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
 }
 
-@media only screen and (max-width: 641px) {
+@media only screen and (max-width: 640px) {
     nav {
         justify-content: space-between;
 
@@ -372,8 +439,12 @@ footer {
             display: none;
         }
 
-        button, .offcanvas-header {
+        .list-button {
             padding: calc(25px / 1.2) calc(65px / 1.6);
+        }
+
+        .offcanvas-header {
+            padding: calc(25px / 1.2) 16px;
         }
 
         .navbar-logo {
@@ -392,7 +463,7 @@ footer {
         }
 
         button {
-            font-size: 24px !important;
+            font-size: 24px;
             color: $accent-color !important;
             display: inline-block !important;
         }
@@ -404,7 +475,75 @@ footer {
 
             button {
                 color: $accent-color !important;
+                font-size: 36px;
+            }
+        }
+
+        .offcanvas-body {
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                a {
+                    padding-right: 0;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    #hero {
+        background-image:
+            linear-gradient(45deg,
+                transparent,
+                rgba(42, 50, 46, 0.85)),
+            url('assets/heroImg.jpg');
+    
+        img {
+            width: 70vw;
+        }
+    }
+
+    #about {
+        .about-info {
+            max-width: 100%;
+            padding: 25px 20px;
+            gap: 25px;
+    
+            h2 {
+                font-size: 40px;
+            }
+    
+            p {
+                font-size: 24px;
+            }
+        }
+    
+        .about-1 {
+            background-size: cover;
+            background-position: 45% center;
+    
+            .about-info-1 {
+                text-align: center;
+                border-left: none;
+                border-bottom: 2.5px solid white;
+            }
+        }
+    
+        .about-2 {
+            .about-info-2 {
+                color: black;
+                text-align: center;
+                border-right: none;
+                border-bottom: 2.5px solid black;
+    
+                a {
+                    text-align: center;
+                    align-self: center;
+                }
             }
         }
     }
 }
+
+@media only screen and (max-width: 480px) {}
