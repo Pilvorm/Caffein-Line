@@ -16,26 +16,7 @@ html {
 }
 
 body {
-    height: 100%;
     background-color: $main-color;
-}
-
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    // background: rgb(51, 51, 51, );
-    background-image: linear-gradient(90deg,
-            rgba(128, 128, 128, 0.5),
-            rgba(128, 128, 128, 0.3)),
-        url('assets/ContactBackground.jpeg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 ::-webkit-scrollbar {
@@ -91,143 +72,7 @@ nav {
 
 }
 
-#header {
-    margin-top: 150px;
-    color: white;
-    text-align: center;
-
-    h1 {
-        font-size: 54px;
-        font-weight: bold;
-        font-family: 'Julius Sans One';
-    }
-
-    p {
-        font-size: 28px;
-        font-weight: 100;
-        width: 40%;
-        margin: auto;
-        font-family: 'Montserrat', sans-serif;
-    }
-}
-
-#form {
-    width: 750px;
-    padding: 45px 30px 75px 30px;
-    border-radius: 3px;
-    margin: 75px auto 0px auto;
-    @extend .flex-column;
-    gap: 45px;
-    background: rgb(26, 26, 26, 0.8);
-
-    .form-group {
-        @extend .flex-column;
-        gap: 15px;
-    }
-
-    .form-control {
-        border: 1px solid #ced4da;
-        border-radius: 0.25rem;
-        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-    }
-
-    .form-control:focus {
-        outline: 0;
-        border-color: rgb(222, 184, 135, 0.8);
-        box-shadow: 0 0 2px 1.5px rgb(222, 184, 135, 0.8);
-    }
-
-    .required-mark {
-        margin-left: 5px;
-    }
-
-    .required-warning {
-        font-size: 18px;
-        margin-left: 5px;
-        color: #ff3333;
-        font-weight: 100;
-        font-family: 'Montserrat' ,sans-serif;
-    }
-
-    label {
-        color: white;
-        font-size: 22px;
-        font-family: 'Julius Sans One';
-
-        .required-mark {
-            color: $accent-color;
-        }
-    }
-
-    input {
-        min-height: 50px;
-        border-radius: 3px;
-        padding: 5px 10px;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    textarea {
-        border-radius: 3px;
-        padding: 5px 10px;
-        min-height: 100px;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    button {
-        color: white;
-        padding: 10px 0;
-        font-size: 18px;
-        background-color: $main-color;
-        font-family: 'Julius Sans One';
-        transition: all 0.3s ease;
-
-        &:hover {
-            color: $main-color;
-            background-color: $accent-color;
-            transition: all 0.3s ease;
-        }
-    }
-}
-
-#info-section,
-#socials {
-    @extend .flex-column;
-    gap: 45px;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-
-    h3 {
-        color: white;
-        font-size: 24px;
-        font-weight: 100;
-    }
-
-    p,
-    a {
-        color: $accent-color;
-        font-size: 24px;
-        font-weight: 100;
-    }
-}
-
-#socials {
-    gap: 25px;
-
-    .social-list {
-        color: $accent-color;
-        display: flex;
-        justify-content: center;
-        gap: 45px;
-
-        a {
-            font-size: 40px;
-        }
-    }
-}
-
 footer {
-    border: 1px solid transparent;
-    background-color: $main-color;
     font-family: 'Montserrat', sans-serif;
     padding: 0 50px;
 
@@ -336,7 +181,8 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1280px) {}
+@media only screen and (max-width: 1280px) {
+}
 
 @media only screen and (max-width: 1024px) {
     nav {
@@ -350,25 +196,6 @@ footer {
             height: auto;
             gap: 100px;
         }
-    }
-}
-
-@media only screen and (max-width: 808px) {
-    #header {
-        margin-top: 150px;
-
-        h1 {
-            font-size: 54px;
-        }
-
-        p {
-            font-size: 28px;
-            width: 60%;
-        }
-    }
-
-    #form {
-        width: 100%;
     }
 }
 
@@ -402,12 +229,14 @@ footer {
 
         .socials {
             .social-list {
+
                 a {
                     font-size: 14px;
                 }
             }
         }
     }
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -467,48 +296,6 @@ footer {
                     padding-right: 0;
                     padding-left: 0;
                 }
-            }
-        }
-    }
-
-    #header {
-        h1 {
-            font-size: 42px;
-        }
-
-        p {
-            font-size: 24px;
-            width: 70%;
-        }
-    }
-
-    #form {
-        padding: 30px 10px 60px 10px;
-
-        label {
-            font-size: 20px;
-        }
-    }
-
-    #info-section,
-    #socials {
-
-        h3 {
-            font-size: 20px;
-        }
-
-        p,
-        a {
-            font-size: 20px;
-        }
-    }
-
-    #socials {
-        gap: 25px;
-
-        .social-list {
-            a {
-                font-size: 32px;
             }
         }
     }

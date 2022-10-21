@@ -27,7 +27,7 @@ body {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
 }
 
-.flex-column, footer .socials, footer .footer-nav ul, footer .footer-desc, #about .about-info {
+.flex-column, footer .socials, footer .footer-nav ul, footer .footer-desc {
   display: flex;
   flex-direction: column;
 }
@@ -59,151 +59,6 @@ nav .current-nav {
 nav .navbar-logo,
 nav button {
   display: none !important;
-}
-
-#hero {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 800px;
-  background-image: linear-gradient(45deg, transparent, rgba(42, 50, 46, 0.5)), url("assets/heroImg.jpg");
-  background-size: cover;
-}
-#hero img {
-  width: 50vw;
-}
-
-#about .about {
-  width: 100%;
-  background-attachment: fixed;
-  height: 800px;
-  display: flex;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-}
-#about .about-info {
-  max-width: 45%;
-  margin: 5%;
-  padding: 0 20px;
-  gap: 25px;
-}
-#about .about-info h2 {
-  font-size: 46px;
-  font-weight: 400;
-}
-#about .about-info p {
-  font-size: 28px;
-  font-weight: 300;
-  line-height: 1.5;
-}
-#about .about-1 {
-  background-image: url("assets/about1.jpeg");
-  background-size: cover;
-}
-#about .about-1 .about-info-1 {
-  color: white;
-  text-align: justify;
-  text-justify: inter-word;
-  border-left: 2.5px solid white;
-}
-#about .about-2 {
-  background-image: url("assets/about2v2.jpg");
-  background-size: cover;
-  justify-content: flex-end;
-}
-#about .about-2 .about-info-2 {
-  color: black;
-  text-align: right;
-  border-right: 2.5px solid black;
-}
-#about .about-2 .about-info-2 a {
-  color: white;
-  background-color: black;
-  width: 30%;
-  padding: 12px 0;
-  font-size: 24px;
-  text-align: center;
-  text-decoration: none;
-  align-self: flex-end;
-  border-radius: 3px;
-  transition: all 0.25s ease;
-}
-#about .about-2 .about-info-2 a:hover {
-  color: black;
-  background-color: burlywood;
-  transition: all 0.25s ease;
-}
-
-#event {
-  width: 100%;
-  height: 800px;
-}
-#event .swiper {
-  position: relative;
-}
-#event .swiper,
-#event .swiper-wrapper,
-#event .swiper-slide {
-  width: 100%;
-  height: 800px;
-}
-#event .swiper-button-prev,
-#event .swiper-button-next {
-  color: white;
-  background-color: rgba(42, 50, 46, 0.5);
-  margin: 0 2%;
-  padding: 50px 25px;
-  border-radius: 2px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: all 0.125s ease-in-out;
-}
-#event .swiper-button-prev:hover,
-#event .swiper-button-next:hover {
-  background-color: rgba(42, 50, 46, 0.8);
-  transition: all 0.125s ease-in-out;
-}
-#event .swiper-pagination-bullet {
-  width: 35px;
-  border-radius: 0;
-}
-#event .swiper-pagination-bullet-active {
-  background-color: burlywood;
-}
-#event .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  font-family: "Julius Sans One", sans-serif;
-  font-weight: 600;
-  background-size: cover;
-}
-#event .event-1 {
-  background-image: url("assets/event1.jpg");
-  font-size: 54px;
-  line-height: 1.8;
-}
-#event .event-1 p {
-  max-width: 65%;
-  text-shadow: -10px 15px 8px rgba(42, 50, 46, 0.5);
-}
-#event .event-2 {
-  background-image: url("assets/event2.jpg");
-  background-position: center;
-  font-size: 28px;
-}
-#event .event-3 {
-  background-image: linear-gradient(45deg, transparent, rgba(42, 50, 46, 0.2)), url("assets/event3.jpg");
-  background-position: center;
-  font-size: 54px;
-  line-height: 1.8;
-}
-#event .event-3 p {
-  max-width: 50%;
 }
 
 footer {
@@ -295,18 +150,9 @@ footer .copyright {
   font-weight: 300;
 }
 
-@media only screen and (max-width: 1280px) {
-  #about .about-2 .about-info-2 a {
-    width: 35%;
-    font-size: 24px;
-  }
-}
 @media only screen and (max-width: 1024px) {
   nav a {
     padding: 20.8333333333px 46.4285714286px;
-  }
-  #about .about-2 .about-info-2 a {
-    width: 47.5%;
   }
   footer .footer-wrapper {
     height: auto;
@@ -316,34 +162,6 @@ footer .copyright {
 @media only screen and (max-width: 768px) {
   nav a {
     padding: 20.8333333333px 40.625px;
-  }
-  #hero {
-    background-position: right;
-    background-image: linear-gradient(45deg, transparent, rgba(42, 50, 46, 0.7)), url("assets/heroImg.jpg");
-  }
-  #about .about-info {
-    max-width: 55%;
-  }
-  #about .about-info h2 {
-    font-size: 36px;
-  }
-  #about .about-info p {
-    font-size: 26px;
-  }
-  #about .about-1 {
-    background-position: 20% center;
-  }
-  #about .about-2 {
-    background-image: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.5)), url("assets/about2V2.jpg");
-    background-position: top;
-  }
-  #about .about-2 .about-info-2 a {
-    width: 50%;
-    font-size: 24px;
-  }
-  #event .event-1,
-#event .event-3 {
-    font-size: 42px;
   }
   footer .footer-top {
     display: grid;
@@ -410,63 +228,6 @@ footer .copyright {
     padding-right: 0;
     padding-left: 0;
   }
-  #hero {
-    background-image: linear-gradient(45deg, transparent, rgba(42, 50, 46, 0.85)), url("assets/heroImg.jpg");
-  }
-  #hero img {
-    width: 70vw;
-  }
-  #about .about-info {
-    max-width: 100%;
-    padding: 25px 20px;
-    gap: 25px;
-  }
-  #about .about-info h2 {
-    font-size: 40px;
-  }
-  #about .about-info p {
-    font-size: 24px;
-  }
-  #about .about-1 {
-    background-image: linear-gradient(45deg, transparent, rgba(0, 0, 0, 0.5)), url("assets/about1.jpeg");
-    background-size: cover;
-    background-position: 45% center;
-  }
-  #about .about-1 .about-info-1 {
-    text-align: center;
-    border-left: none;
-    border-bottom: 2.5px solid white;
-  }
-  #about .about-2 .about-info-2 {
-    color: black;
-    text-align: center;
-    border-right: none;
-    border-bottom: 2.5px solid black;
-  }
-  #about .about-2 .about-info-2 a {
-    text-align: center;
-    align-self: center;
-  }
-  #event .swiper-pagination-bullet {
-    margin-bottom: 25px;
-  }
-  #event .swiper-button-prev,
-#event .swiper-button-next {
-    display: none;
-  }
-  #event .event-1 {
-    font-size: 32px;
-  }
-  #event .event-1 p {
-    max-width: 85%;
-  }
-  #event .event-3 {
-    background-image: linear-gradient(45deg, transparent, rgba(42, 50, 46, 0.6)), url("assets/event3.jpg");
-    font-size: 32px;
-  }
-  #event .event-3 p {
-    max-width: 85%;
-  }
   footer .footer-top {
     display: grid;
     grid-template: "desc desc" "nav social";
@@ -517,4 +278,4 @@ footer .copyright {
   footer .socials .social-list a {
     align-self: flex-start;
   }
-}/*# sourceMappingURL=home.css.map */
+}/*# sourceMappingURL=payment.css.map */

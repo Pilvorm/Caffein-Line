@@ -12,6 +12,7 @@ html {
 }
 
 body {
+  height: 100%;
   background-color: #1A1A1A;
 }
 
@@ -41,7 +42,8 @@ body::before {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
 }
 
-.flex-column, #info-section, #socials, #form .form-group, #form {
+.flex-column, footer .socials, footer .footer-nav ul, footer .footer-desc, #info-section,
+#socials, #form .form-group, #form {
   display: flex;
   flex-direction: column;
 }
@@ -68,7 +70,7 @@ nav a:hover {
   transition: all 0.3s ease-in-out;
 }
 nav .current-nav {
-  border-bottom: 1px solid burlywood;
+  border-bottom: 2px solid burlywood;
 }
 nav .navbar-logo,
 nav button {
@@ -76,7 +78,7 @@ nav button {
 }
 
 #header {
-  margin-top: 175px;
+  margin-top: 150px;
   color: white;
   text-align: center;
 }
@@ -95,14 +97,34 @@ nav button {
 
 #form {
   width: 750px;
-  padding: 30px 30px;
+  padding: 45px 30px 75px 30px;
   border-radius: 3px;
-  margin: 50px auto;
+  margin: 75px auto 0px auto;
   gap: 45px;
   background: rgba(26, 26, 26, 0.8);
 }
 #form .form-group {
   gap: 15px;
+}
+#form .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#form .form-control:focus {
+  outline: 0;
+  border-color: rgba(222, 184, 135, 0.8);
+  box-shadow: 0 0 2px 1.5px rgba(222, 184, 135, 0.8);
+}
+#form .required-mark {
+  margin-left: 5px;
+}
+#form .required-warning {
+  font-size: 18px;
+  margin-left: 5px;
+  color: #ff3333;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
 }
 #form label {
   color: white;
@@ -120,7 +142,9 @@ nav button {
 }
 #form textarea {
   border-radius: 3px;
+  padding: 5px 10px;
   min-height: 100px;
+  font-family: "Montserrat", sans-serif;
 }
 #form button {
   color: white;
@@ -136,17 +160,22 @@ nav button {
   transition: all 0.3s ease;
 }
 
-#info-section, #socials {
+#info-section,
+#socials {
   gap: 45px;
   text-align: center;
   font-family: "Montserrat", sans-serif;
 }
-#info-section h3, #socials h3 {
+#info-section h3,
+#socials h3 {
   color: white;
   font-size: 24px;
   font-weight: 100;
 }
-#info-section p, #info-section a, #socials p, #socials a {
+#info-section p,
+#info-section a,
+#socials p,
+#socials a {
   color: burlywood;
   font-size: 24px;
   font-weight: 100;
@@ -157,15 +186,112 @@ nav button {
 }
 #socials .social-list {
   color: burlywood;
-  font-size: 40px;
   display: flex;
   justify-content: center;
   gap: 45px;
+}
+#socials .social-list a {
+  font-size: 40px;
+}
+
+footer {
+  border: 1px solid transparent;
+  background-color: #1A1A1A;
+  font-family: "Montserrat", sans-serif;
+  padding: 0 50px;
+}
+footer .footer-wrapper {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+  border-bottom: 1px solid white;
+}
+footer .footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+footer img {
+  width: 300px;
+}
+footer .footer-header {
+  font-size: 18px;
+  font-weight: 300;
+}
+footer .footer-desc {
+  color: white;
+  font-weight: 300;
+  text-align: justify;
+  text-justify: inter-word;
+  gap: 50px;
+}
+footer .footer-nav {
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+footer .footer-nav ul {
+  margin-top: 40px;
+  gap: 40px;
+}
+footer .footer-nav a {
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  transition: all 0.125s ease-in-out;
+}
+footer .footer-nav a:hover {
+  color: burlywood;
+  transition: all 0.125s ease-in-out;
+}
+footer .socials {
+  color: white;
+  align-items: flex-end;
+}
+footer .socials .social-list {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+footer .socials .social-list a {
+  color: burlywood;
+  text-decoration: none;
+  align-self: flex-end;
+}
+footer .socials .social-list a i {
+  margin-right: 10px;
+}
+footer .location {
+  color: white;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+footer .location i {
+  font-size: 22px;
+}
+footer .copyright {
+  color: white;
+  margin: 50px 0;
+  text-align: center;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 1024px) {
   nav a {
     padding: 20.8333333333px 46.4285714286px;
+  }
+  footer .footer-wrapper {
+    height: auto;
+    gap: 100px;
   }
 }
 @media only screen and (max-width: 808px) {
@@ -186,6 +312,23 @@ nav button {
 @media only screen and (max-width: 768px) {
   nav a {
     padding: 20.8333333333px 40.625px;
+  }
+  footer .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 25px;
+  }
+  footer .footer-desc p {
+    font-size: 14px;
+  }
+  footer .footer-header {
+    font-size: 16px;
+  }
+  footer .footer-nav {
+    gap: 25px;
+  }
+  footer .socials .social-list a {
+    font-size: 14px;
   }
 }
 @media only screen and (max-width: 640px) {
@@ -234,5 +377,84 @@ nav button {
   nav .offcanvas-body ul a {
     padding-right: 0;
     padding-left: 0;
+  }
+  #header h1 {
+    font-size: 42px;
+  }
+  #header p {
+    font-size: 24px;
+    width: 70%;
+  }
+  #form {
+    padding: 30px 10px 60px 10px;
+  }
+  #form label {
+    font-size: 20px;
+  }
+  #info-section h3,
+#socials h3 {
+    font-size: 20px;
+  }
+  #info-section p,
+#info-section a,
+#socials p,
+#socials a {
+    font-size: 20px;
+  }
+  #socials {
+    gap: 25px;
+  }
+  #socials .social-list a {
+    font-size: 32px;
+  }
+  footer .footer-top {
+    display: grid;
+    grid-template: "desc desc" "nav social";
+    row-gap: 50px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+  footer img {
+    width: 200px;
+  }
+  footer .footer-desc {
+    grid-area: desc;
+  }
+  footer .footer-nav {
+    grid-area: nav;
+    justify-content: flex-start;
+  }
+  footer .socials {
+    grid-area: social;
+  }
+}
+@media only screen and (max-width: 480px) {
+  footer .footer-top {
+    display: grid;
+    grid-template: "desc" "nav" "social";
+    row-gap: 50px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+  footer img {
+    width: 200px;
+  }
+  footer .footer-desc {
+    grid-area: desc;
+  }
+  footer .footer-nav {
+    grid-area: nav;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  footer .socials {
+    align-items: flex-start;
+  }
+  footer .socials .social-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .socials .social-list a {
+    align-self: flex-start;
   }
 }/*# sourceMappingURL=contact.css.map */
