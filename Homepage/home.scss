@@ -256,12 +256,18 @@ footer {
     padding: 0 50px;
 
     .footer-wrapper {
-        height: 425px;
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 50px 0;
+        border-bottom: 1px solid white;
+    }
+
+    .footer-top {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
-        padding: 50px 0;
-        border-bottom: 1px solid white;
     }
 
     img {
@@ -279,23 +285,9 @@ footer {
         text-align: justify;
         text-justify: inter-word;
         @extend .flex-column;
-        justify-content: space-between;
-    }
-
-    .footer-desc-top {
-        @extend .flex-column;
         gap: 50px;
     }
 
-    .location {
-        display: flex;
-        gap: 25px;
-        align-items: center;
-
-        i {
-            font-size: 22px;
-        }
-    }
 
     .footer-nav {
         color: white;
@@ -326,18 +318,37 @@ footer {
     .socials {
         color: white;
         @extend .flex-column;
-        align-items: center;
+        align-items: flex-end;
 
         .social-list {
             margin-top: 40px;
             width: 100%;
             display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 40px;
             justify-content: space-between;
 
             a {
                 color: $accent-color;
                 text-decoration: none;
+                align-self: flex-end;
+
+                i {
+                    margin-right: 10px;
+                }
             }
+        }
+    }
+
+    .location {
+        color: white;
+        display: flex;
+        gap: 25px;
+        align-items: center;
+
+        i {
+            font-size: 22px;
         }
     }
 
@@ -376,6 +387,14 @@ footer {
                     width: 47.5%;
                 }
             }
+        }
+    }
+
+    footer {
+
+        .footer-wrapper {
+            height: auto;
+            gap: 100px;
         }
     }
 }
@@ -429,6 +448,47 @@ footer {
             }
         }
     }
+
+
+    #event {
+
+        .event-1,
+        .event-3 {
+            font-size: 42px;
+        }
+    }
+
+    footer {
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 2fr 1fr;
+            gap: 25px;
+        }
+
+        .footer-desc {
+            p {
+                font-size: 14px;
+            }
+        }
+
+        .footer-header {
+            font-size: 16px;
+        }
+
+        .footer-nav {
+            gap: 25px;
+        }
+
+        .socials {
+            .social-list {
+
+                a {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -498,7 +558,7 @@ footer {
                 transparent,
                 rgba(42, 50, 46, 0.85)),
             url('assets/heroImg.jpg');
-    
+
         img {
             width: 70vw;
         }
@@ -509,39 +569,94 @@ footer {
             max-width: 100%;
             padding: 25px 20px;
             gap: 25px;
-    
+
             h2 {
                 font-size: 40px;
             }
-    
+
             p {
                 font-size: 24px;
             }
         }
-    
+
         .about-1 {
             background-size: cover;
             background-position: 45% center;
-    
+
             .about-info-1 {
                 text-align: center;
                 border-left: none;
                 border-bottom: 2.5px solid white;
             }
         }
-    
+
         .about-2 {
             .about-info-2 {
                 color: black;
                 text-align: center;
                 border-right: none;
                 border-bottom: 2.5px solid black;
-    
+
                 a {
                     text-align: center;
                     align-self: center;
                 }
             }
+        }
+    }
+
+    #event {
+        .swiper-pagination-bullet {
+            margin-bottom: 25px;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+        }
+
+        .event-1 {
+            font-size: 32px;
+
+            p {
+                max-width: 85%;
+            }
+        }
+
+        .event-3 {
+            background-image:
+                linear-gradient(45deg,
+                    transparent,
+                    rgba(42, 50, 46, 0.6)),
+                url('assets/event3.jpg');
+            font-size: 32px;
+
+            p {
+                max-width: 85%;
+            }
+        }
+    }
+
+    footer {
+        .footer-top {
+            display: grid;
+            grid-template:
+            'desc desc'
+            'nav social';
+            gap: 50px;
+        }
+
+        img {
+            width: 200px;
+        }
+
+        .footer-desc {
+            grid-area: desc;
+        }
+
+        .footer-nav {
+            grid-area: nav;
+            justify-content: flex-start;
         }
     }
 }
