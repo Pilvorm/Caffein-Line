@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Caffein Line</title>
+    <link rel="stylesheet" href="contact.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <nav id="navbar">
+        <a href="../Homepage/home.html" class="nav-wide">HOME</a>
+        <a href="" class="nav-wide">ABOUT</a>
+        <a href="" class="nav-wide">SHOP</a>
+        <a href="" class="nav-wide">EVENT</a>
+        <a href="" class="current-nav nav-wide">CONTACT</a>
+
+        <div class="navbar-logo">
+            <img src="../Homepage/assets/logo.png" alt="">
+        </div>
+        <button class="block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight"><i class="bi bi-list list-button"></i></button>
+
+        <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-[#1A1A1A] invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-white top-0 right-0 border-none w-96"
+            tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header flex items-center justify-between">
+                <img src="../Homepage/assets/logo.png" alt="">
+                <button type="button" class="btn-close box-content" data-bs-dismiss="offcanvas" aria-label="Close"><i
+                        class="bi bi-x x-button"></i></button>
+            </div>
+            <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
+                <ul>
+                    <a href="" class="current-nav">HOME</a>
+                    <a href="" class="">ABOUT</a>
+                    <a href="" class="">SHOP</a>
+                    <a href="" class="">EVENT</a>
+                    <a href="" class="">CONTACT</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="header">
+        <h1>CONTACT US</h1>
+        <p>Your feedback will help us improve our products and services to fullfill your needs</p>
+    </div>
+
+    <form id="form" name="contact-form">
+        <div class="form-group">
+            <label id="name" for="name">NAME<span class="required-mark">*</span><span id="invalid-name-warning"></span></label>
+            <input
+                type="text"
+                name="name"
+                id="name"
+                class="form-control"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label id="email" for="email">EMAIL<span class="required-mark">*</span><span id="invalid-email-warning"></span></label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control"
+                placeholder="example@mail.com"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label id="message" for="message">MESSAGE<span class="required-mark">*</span><span id="invalid-message-warning"></span></label>
+            <textarea name="message" class="form-control" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label id="message" for="message">ADDITIONAL DETAILS</label>
+            <textarea name="message" class="form-control" required></textarea>
+        </div>
+
+        <button type="submit" id="submit" class="submit-button">
+            SUBMIT
+        </button>
+
+        <hr>
+
+        <div id="info-section">
+            <div class="info">
+                <h3>Our location</h2>
+                <a href="https://goo.gl/maps/QYC9vJYCHrubidxj7" target="_blank">Sattelite Beach, Florida (FL), 230502</a>
+            </div>
+
+            <div class="info">
+                <h3>Call us</h2>
+                <p>(021) 22790888</p>
+            </div>
+
+            <div class="info">
+                <h3>Send us a mail</h2>
+                <a href="mailto:mail@caffeinline.co.id?Subject=Feedback">mail@caffeinline.co.id</a>
+            </div>
+        </div>
+
+        <hr>
+
+        <div id="socials">
+            <h3>Stay Connected</h2>
+            <div class="social-list">
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-youtube"></i>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="contact.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+</body>
+
+</html>
