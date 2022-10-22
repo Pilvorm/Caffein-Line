@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caffein Line</title>
+    <title>Payment - Caffein Line</title>
     <link rel="stylesheet" href="payment.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
@@ -47,11 +45,111 @@
                     <a href="../Homepage/home.html#about">ABOUT</a>
                     <a href="" class="">SHOP</a>
                     <a href="../Homepage/home.html#event" class="">EVENT</a>
-                    <a href="" class="">CONTACT</a>
+                    <a href="" class="current-nav">CONTACT</a>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <form id="form" name="contact-form">
+        <div class="section">
+            <h2>Payment</h2>
+
+            <div class="form-group">
+                <label id="method-label" for="method">Payment method</label>
+                <div class="method-wrap">
+                    <select name="method" id="method" class="form-control med-width">
+                        <option value="Visa">Visa</option>
+                        <option value="Mastercard">Mastercard</option>
+                    </select>
+                    <img src="assets/visa.png" alt="">
+                    <img src="assets/mastercard2.png" alt="">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label id="number-label" for="number">Card number<span class="required-mark">*</span><span
+                            id="invalid-number-warning" class="required-warning"></span></label>
+                    <input type="text" name="number" id="number" class="form-control m-width" required>
+                </div>
+                <div class="form-group">
+                    <label id="expire-label" for="expire">Expiration date<span class="required-mark">*</span><span
+                            id="invalid-expire-warning" class="required-warning"></span></label>
+                    <div class="row expire-wrap">
+                        <input type="text" name="expire" id="expire" class="form-control s-width" placeholder="MM"
+                        maxlength="2" required>
+                        <input type="text" name="year" id="year" class="form-control s-width" placeholder="YYYY"
+                        maxlength="4" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label id="security-label" for="security">Security code<span class="required-mark">*</span><span
+                        id="invalid-security-warning" class="required-warning"></span></label>
+                <input type="text" name="security" id="security" maxlength="4" class="form-control xs-width" required>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Billing Information</h2>
+
+            <div class="row">
+                <div class="form-group">
+                    <label id="first-label" for="first">First name<span class="required-mark">*</span><span
+                            id="invalid-first-warning" class="required-warning"></span></label>
+                    <input type="text" name="first" id="first" class="form-control m-width" required>
+                </div>
+                <div class="form-group">
+                    <label id="last-label" for="last">Last name<span class="required-mark">*</span><span
+                            id="invalid-last-warning" class="required-warning"></span></label>
+                    <input type="text" name="last" id="last" class="form-control m-width" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label id="city-label" for="city">City<span class="required-mark">*</span><span
+                            id="invalid-city-warning" class="required-warning"></span></label>
+                    <input type="text" name="city" id="city" class="form-control m-width" required>
+                </div>
+                <div class="form-group">
+                    <label id="address1-label" for="address1">Billing address 1<span class="required-mark">*</span><span
+                            id="invalid-address1-warning" class="required-warning"></span></label>
+                    <input type="text" name="address1" id="address1" class="form-control m-width" required>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <label id="address2-label" for="address2">Billing address, line 2</label>
+                    <input type="text" name="address2" id="address2" class="form-control m-width">
+                </div>
+                <div class="form-group">
+                    <label id="postal-label" for="postal">Postal code<span class="required-mark">*</span><span
+                            id="invalid-postal-warning" class="required-warning"></span></label>
+                    <input type="text" name="postal" id="postal" maxlength="5" class="form-control m-width" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label id="phone-label" for="phone">Phone number<span class="required-mark">*</span><span
+                        id="invalid-phone-warning" class="required-warning"></span></label>
+                <input type="text" name="phone" id="phone" class="form-control m-width" required>
+            </div>
+        </div>
+
+        <div class="section agree">
+            <input type="checkbox" id="agree" name="agree" value="agreed">
+            <label for="agree">I agree to Caffein Line's <a href="">terms and conditions</a></label><br>
+        </div>
+
+        <div class="section action">
+            <a href="">Back</a>
+            <button type="submit" onclick="checkField()">Continue</button>
+        </div>
+    </form>
 
     <footer>
         <div class="footer-wrapper">
@@ -93,10 +191,10 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <div class="location">
+                <a href="https://goo.gl/maps/QYC9vJYCHrubidxj7" target="_blank" class="location">
                     <i class="bi bi-geo-alt"></i>
                     <p>Sattelite Beach, Florida (FL), 230502</p>
-                </div>
+                </a>
             </div>
         </div>
 

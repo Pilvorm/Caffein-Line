@@ -138,13 +138,13 @@ nav {
         justify-content: flex-end;
 
         .about-info-2 {
-            color: black;
+            color: $main-color;
             text-align: right;
             border-right: 2.5px solid black;
 
             a {
                 color: white;
-                background-color: black;
+                background-color: $main-color;
                 width: 30%;
                 padding: 12px 0;
                 font-size: 24px;
@@ -155,7 +155,7 @@ nav {
                 transition: all .25s ease;
 
                 &:hover {
-                    color: black;
+                    color: $main-color;
                     background-color: $accent-color;
                     transition: all .25s ease;
                 }
@@ -672,6 +672,8 @@ footer {
 
 @media only screen and (max-width: 480px) {
     footer {
+        padding: 0 20px;
+        
         .footer-top {
             display: grid;
             grid-template:

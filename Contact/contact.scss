@@ -544,6 +544,7 @@ footer {
 
 @media only screen and (max-width: 480px) {
     footer {
+        padding: 0 20px;
         .footer-top {
             display: grid;
             grid-template:

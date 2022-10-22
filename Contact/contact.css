@@ -429,6 +429,9 @@ footer .copyright {
   }
 }
 @media only screen and (max-width: 480px) {
+  footer {
+    padding: 0 20px;
+  }
   footer .footer-top {
     display: grid;
     grid-template: "desc" "nav" "social";

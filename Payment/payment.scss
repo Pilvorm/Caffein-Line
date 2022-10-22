@@ -16,7 +16,26 @@ html {
 }
 
 body {
+    height: 100%;
     background-color: $main-color;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    // background: rgb(51, 51, 51, );
+    background-image: linear-gradient(90deg,
+            rgba(128, 128, 128, 0.5),
+            rgba(128, 128, 128, 0.3)),
+        url('assets/PaymentBackground.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 ::-webkit-scrollbar {
@@ -72,7 +91,175 @@ nav {
 
 }
 
+#form {
+    width: 750px;
+    padding: 45px 30px 75px 30px;
+    border-radius: 3px;
+    margin: 50px auto 0px auto;
+    @extend .flex-column;
+    gap: 70px;
+    background: rgb(26, 26, 26, 0.8);
+
+    .section {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .form-group {
+        @extend .flex-column;
+        gap: 15px;
+    }
+
+    .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 0.25rem;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+
+    .form-control:focus {
+        outline: 0;
+        border-color: rgb(222, 184, 135, 0.8);
+        box-shadow: 0 0 2px 1.5px rgb(222, 184, 135, 0.8);
+    }
+
+    .required-mark {
+        margin-left: 5px;
+    }
+
+    .required-warning {
+        font-size: 18px;
+        margin-left: 5px;
+        color: #ff3333;
+        font-weight: 100;
+        font-family: 'Montserrat' ,sans-serif;
+    }
+
+    h2 {
+        color: white;
+        font-size: 24px;
+        font-family: 'Julius Sans One';
+    }
+
+    label {
+        color: white;
+        font-size: 20px;
+        font-weight: 100;
+        font-family: 'Montserrat', sans-serif;
+
+        .required-mark {
+            color: $accent-color;
+        }
+    }
+
+    input, select {
+        min-height: 35px;
+        border-radius: 2px !important;
+        padding: 5px 10px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .m-width {
+        width: 250px;
+    }
+
+    .s-width {
+        width: 125px;
+    }
+
+    .xs-width {
+        width: 100px;
+    }
+
+    .method-wrap {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .expire-wrap {
+        width: 100% !important;
+        gap: 5px !important;
+    }
+
+    .row {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    img {
+        width: 60px;
+    }
+
+    .agree {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+
+        input {
+            width: 20px;
+        }
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    .action {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: unset;
+        justify-content: space-between;
+
+        a, button {
+            @extend .action;
+            justify-content: center;
+            width: 150px;
+            height: 40px;
+            color: white;
+            border-radius: 2px;
+            background-color: $main-color;
+            font-weight: 300;
+            font-family: 'Montserrat', sans-serif;
+            transition: all .25s ease;
+
+            &:hover {
+                color: $main-color;
+                background-color: $accent-color;
+                transition: all .25s ease;
+            }
+        }
+    }
+
+    textarea {
+        border-radius: 2px !important;
+        padding: 5px 10px;
+        min-height: 100px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    button {
+        color: white;
+        padding: 10px 0;
+        font-size: 18px;
+        background-color: $main-color;
+        font-family: 'Julius Sans One';
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $main-color;
+            background-color: $accent-color;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
 footer {
+    border: 1px solid transparent;
+    background-color: $main-color;
     font-family: 'Montserrat', sans-serif;
     padding: 0 50px;
 
@@ -181,8 +368,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1280px) {
-}
+@media only screen and (max-width: 1280px) {}
 
 @media only screen and (max-width: 1024px) {
     nav {
@@ -199,10 +385,22 @@ footer {
     }
 }
 
+@media only screen and (max-width: 808px) {
+    #form {
+        width: 100%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     nav {
         a {
             padding: calc(25px / 1.2) calc(65px / 1.6);
+        }
+    }
+
+    #form {
+        .row {
+            width: 90%;
         }
     }
 
@@ -229,14 +427,12 @@ footer {
 
         .socials {
             .social-list {
-
                 a {
                     font-size: 14px;
                 }
             }
         }
     }
-
 }
 
 @media only screen and (max-width: 640px) {
@@ -300,6 +496,32 @@ footer {
         }
     }
 
+    #form {
+        padding: 60px 10px 60px 10px;
+        
+        label {
+            font-size: 18px;
+        }
+
+        .m-width {
+            width: calc(250px / 1.1);
+        }
+    
+        .s-width {
+            width: calc(125px / 1.1);
+        }
+    
+        .xs-width {
+            width: calc(100px / 1.1);
+        }
+
+        .row {
+            width: 100%;
+            gap: 35px;
+            justify-content: unset;
+        }
+    }
+
     footer {
         .footer-top {
             display: grid;
@@ -329,8 +551,32 @@ footer {
     }
 }
 
+@media only screen and (max-width: 550px) {
+    #form {
+        .row {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        .m-width {
+            width: calc(250px * 1.2);
+        }
+    
+        .s-width {
+            width: calc(125px * 1);
+        }
+    
+        .xs-width {
+            width: calc(100px * 1);
+        }
+    }
+}
+
 @media only screen and (max-width: 480px) {
     footer {
+
+        padding: 0 20px;
+
         .footer-top {
             display: grid;
             grid-template:

@@ -12,7 +12,22 @@ html {
 }
 
 body {
+  height: 100%;
   background-color: #1A1A1A;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(90deg, rgba(128, 128, 128, 0.5), rgba(128, 128, 128, 0.3)), url("assets/PaymentBackground.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 ::-webkit-scrollbar {
@@ -27,7 +42,7 @@ body {
   background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
 }
 
-.flex-column, footer .socials, footer .footer-nav ul, footer .footer-desc {
+.flex-column, footer .socials, footer .footer-nav ul, footer .footer-desc, #form .form-group, #form {
   display: flex;
   flex-direction: column;
 }
@@ -61,7 +76,146 @@ nav button {
   display: none !important;
 }
 
+#form {
+  width: 750px;
+  padding: 45px 30px 75px 30px;
+  border-radius: 3px;
+  margin: 50px auto 0px auto;
+  gap: 70px;
+  background: rgba(26, 26, 26, 0.8);
+}
+#form .section {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+#form .form-group {
+  gap: 15px;
+}
+#form .form-control {
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#form .form-control:focus {
+  outline: 0;
+  border-color: rgba(222, 184, 135, 0.8);
+  box-shadow: 0 0 2px 1.5px rgba(222, 184, 135, 0.8);
+}
+#form .required-mark {
+  margin-left: 5px;
+}
+#form .required-warning {
+  font-size: 18px;
+  margin-left: 5px;
+  color: #ff3333;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+}
+#form h2 {
+  color: white;
+  font-size: 24px;
+  font-family: "Julius Sans One";
+}
+#form label {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: "Montserrat", sans-serif;
+}
+#form label .required-mark {
+  color: burlywood;
+}
+#form input, #form select {
+  min-height: 35px;
+  border-radius: 2px !important;
+  padding: 5px 10px;
+  font-family: "Montserrat", sans-serif;
+}
+#form .m-width {
+  width: 250px;
+}
+#form .s-width {
+  width: 125px;
+}
+#form .xs-width {
+  width: 100px;
+}
+#form .method-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#form .expire-wrap {
+  width: 100% !important;
+  gap: 5px !important;
+}
+#form .row {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+#form img {
+  width: 60px;
+}
+#form .agree {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+#form .agree input {
+  width: 20px;
+}
+#form .agree a {
+  text-decoration: underline;
+}
+#form .action, #form .action a, #form .action button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: unset;
+  justify-content: space-between;
+}
+#form .action a, #form .action button {
+  justify-content: center;
+  width: 150px;
+  height: 40px;
+  color: white;
+  border-radius: 2px;
+  background-color: #1A1A1A;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.25s ease;
+}
+#form .action a:hover, #form .action button:hover {
+  color: #1A1A1A;
+  background-color: burlywood;
+  transition: all 0.25s ease;
+}
+#form textarea {
+  border-radius: 2px !important;
+  padding: 5px 10px;
+  min-height: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+#form button {
+  color: white;
+  padding: 10px 0;
+  font-size: 18px;
+  background-color: #1A1A1A;
+  font-family: "Julius Sans One";
+  transition: all 0.3s ease;
+}
+#form button:hover {
+  color: #1A1A1A;
+  background-color: burlywood;
+  transition: all 0.3s ease;
+}
+
 footer {
+  border: 1px solid transparent;
+  background-color: #1A1A1A;
   font-family: "Montserrat", sans-serif;
   padding: 0 50px;
 }
@@ -159,9 +313,17 @@ footer .copyright {
     gap: 100px;
   }
 }
+@media only screen and (max-width: 808px) {
+  #form {
+    width: 100%;
+  }
+}
 @media only screen and (max-width: 768px) {
   nav a {
     padding: 20.8333333333px 40.625px;
+  }
+  #form .row {
+    width: 90%;
   }
   footer .footer-top {
     display: grid;
@@ -228,6 +390,26 @@ footer .copyright {
     padding-right: 0;
     padding-left: 0;
   }
+  #form {
+    padding: 60px 10px 60px 10px;
+  }
+  #form label {
+    font-size: 18px;
+  }
+  #form .m-width {
+    width: 227.2727272727px;
+  }
+  #form .s-width {
+    width: 113.6363636364px;
+  }
+  #form .xs-width {
+    width: 90.9090909091px;
+  }
+  #form .row {
+    width: 100%;
+    gap: 35px;
+    justify-content: unset;
+  }
   footer .footer-top {
     display: grid;
     grid-template: "desc desc" "nav social";
@@ -249,7 +431,25 @@ footer .copyright {
     grid-area: social;
   }
 }
+@media only screen and (max-width: 550px) {
+  #form .row {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  #form .m-width {
+    width: 300px;
+  }
+  #form .s-width {
+    width: 125px;
+  }
+  #form .xs-width {
+    width: 100px;
+  }
+}
 @media only screen and (max-width: 480px) {
+  footer {
+    padding: 0 20px;
+  }
   footer .footer-top {
     display: grid;
     grid-template: "desc" "nav" "social";

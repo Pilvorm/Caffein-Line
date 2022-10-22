@@ -113,13 +113,13 @@ nav button {
   justify-content: flex-end;
 }
 #about .about-2 .about-info-2 {
-  color: black;
+  color: #1A1A1A;
   text-align: right;
   border-right: 2.5px solid black;
 }
 #about .about-2 .about-info-2 a {
   color: white;
-  background-color: black;
+  background-color: #1A1A1A;
   width: 30%;
   padding: 12px 0;
   font-size: 24px;
@@ -130,7 +130,7 @@ nav button {
   transition: all 0.25s ease;
 }
 #about .about-2 .about-info-2 a:hover {
-  color: black;
+  color: #1A1A1A;
   background-color: burlywood;
   transition: all 0.25s ease;
 }
@@ -489,6 +489,9 @@ footer .copyright {
   }
 }
 @media only screen and (max-width: 480px) {
+  footer {
+    padding: 0 20px;
+  }
   footer .footer-top {
     display: grid;
     grid-template: "desc" "nav" "social";

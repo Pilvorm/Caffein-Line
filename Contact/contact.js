@@ -53,5 +53,4 @@ function checkField() {
   if(msg == "") {
     invMessage.innerHTML = 'Required';
   }
-
 }
