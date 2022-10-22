@@ -74,32 +74,22 @@ nav {
 
 }
 
-.swiper {
-    width: 100%;
-    height: $section-height;
-    margin-top: 76px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-
-    .swiper-slide {
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
-}
-
-h3 {
-    color: white;
-    text-align: center;
-    font-size: 32px;
-    margin: 100px 0 50px 0;
-    font-family: 'Julius Sans One';
-}
-
-#beverages {
+.section {
     .swiper {
+        margin-top: 76px;
+        width: 100%;
+        height: $section-height;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        .swiper-slide {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
         h2 {
             color: white;
             position: absolute;
@@ -109,29 +99,6 @@ h3 {
             font-size: 100px;
             font-family: 'Kaushan Script', cursive;
             z-index: 999;
-        }
-
-        .beverage-1 {
-            background-image: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.2)),
-                url('assets/beverage1.jpg');
-        }
-
-        .beverage-2 {
-            background-image: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.2)),
-                url('assets/beverage2.jpg');
-            background-position: center 40%;
-        }
-
-        .beverage-3 {
-            background-image: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.2)),
-                url('assets/beverage3.jpg');
-            background-position: center 35%;
         }
     }
 
@@ -145,7 +112,7 @@ h3 {
 
     .menu-wrapper {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        grid-template-columns: repeat(3, minmax(320px, 1fr));
         margin: 0 50px;
         gap: 75px;
 
@@ -191,96 +158,66 @@ h3 {
     }
 }
 
+#beverages {
+    .beverage-1 {
+        background-image: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)),
+            url('assets/beverage1.jpg');
+    }
+
+    .beverage-2 {
+        background-image: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)),
+            url('assets/beverage2.jpg');
+        background-position: center 40%;
+    }
+
+    .beverage-3 {
+        background-image: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)),
+            url('assets/beverage3.jpg');
+        background-position: center 35%;
+    }
+}
+
 #desserts {
     .swiper {
         margin-top: 150px !important;
-        h2 {
-            color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 100px;
-            font-family: 'Kaushan Script', cursive;
-            z-index: 999;
-        }
-
-        .dessert-1 {
-            background-image: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.2)),
-                url('assets/dessert1.jpg');
-        }
-
-        .dessert-2 {
-            background-image: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.2)),
-                url('assets/dessert2.jpg');
-            background-position: center 70%;
-        }
-
-        .dessert-3 {
-            background-image: linear-gradient(90deg,
-                    rgba(0, 0, 0, 0.2),
-                    rgba(0, 0, 0, 0.2)),
-                url('assets/dessert3.jpg');
-            background-position: center center;
-        }
-    }
-
-    h3 {
-        color: white;
-        text-align: center;
-        font-size: 32px;
-        margin: 100px 0 50px 0;
-        font-family: 'Julius Sans One';
     }
 
     .menu-wrapper {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-        margin: 0 50px;
-        gap: 75px;
-
         .item {
-            display: flex;
-            gap: 25px;
-            padding: 0 0 75px 0;
-            border-bottom: 1px solid white;
-
-            .item-desc {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-            }
-
             img {
-                display: block;
-                width: 175px;
-                object-fit: contain;
-            }
-
-            h4 {
-                color: white;
-                font-size: 24px;
-                font-weight: 300;
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            p {
-                color: white;
-                font-size: 14px;
-                font-weight: 300;
-                font-family: 'Montserrat', sans-serif;
-            }
-
-            h5 {
-                color: $accent-color;
-                font-size: 28px;
-                font-family: 'Julius Sans One';
+                height: 105px !important;
+                width: auto;
             }
         }
+    }
+
+    .dessert-1 {
+        background-image: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)),
+            url('assets/dessert1.jpg');
+    }
+
+    .dessert-2 {
+        background-image: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)),
+            url('assets/dessert2.jpg');
+        background-position: center 70%;
+    }
+
+    .dessert-3 {
+        background-image: linear-gradient(90deg,
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)),
+            url('assets/dessert3.jpg');
+        background-position: center center;
     }
 }
 
@@ -299,7 +236,7 @@ h3 {
         text-align: center;
         font-family: 'Julius Sans One';
         transition: all .25s ease;
-        
+
         &:hover {
             color: white;
             background-color: transparent;
@@ -417,12 +354,31 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1280px) {}
+@media only screen and (max-width: 1280px) {
+
+    .section {
+        .menu-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        }
+    }
+}
 
 @media only screen and (max-width: 1024px) {
     nav {
         a {
             padding: calc(25px / 1.2) calc(65px / 1.4);
+        }
+    }
+
+    .section {
+        .swiper {
+            margin-top: 68px;
+        }
+
+        .menu-wrapper {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         }
     }
 
@@ -438,6 +394,33 @@ footer {
     nav {
         a {
             padding: calc(25px / 1.2) calc(65px / 1.6);
+        }
+    }
+
+    .swiper {
+        height: 375px;
+    }
+
+    .section {
+        .swiper {
+            h2 {
+                font-size: 70px;
+            }
+        }
+
+        .menu-wrapper {
+            .item {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                padding: 0 0 25px 0;
+
+                .item-desc {
+                    gap: 25px;
+                    justify-content: unset;
+                }
+            }
         }
     }
 
@@ -531,6 +514,15 @@ footer {
                     padding-right: 0;
                     padding-left: 0;
                 }
+            }
+        }
+    }
+
+    .section,
+    #desserts {
+        .swiper {
+            h2 {
+                font-size: 54px;
             }
         }
     }
