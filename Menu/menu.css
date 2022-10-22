@@ -1,0 +1,472 @@
+@import url("https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@200;300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #1A1A1A;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: burlywood;
+  border: 4px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
+  border-radius: 0;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent));
+}
+
+.flex-column, footer .socials, footer .footer-nav ul, footer .footer-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  background-color: #1A1A1A;
+  font-family: "Julius Sans One", sans-serif;
+  transition: all 0.3s ease;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 25px 65px;
+  transition: all 0.3s ease-in-out;
+}
+nav a:hover {
+  background-color: burlywood;
+  transition: all 0.3s ease-in-out;
+}
+nav .current-nav {
+  border-bottom: 2px solid burlywood;
+}
+nav .navbar-logo,
+nav button {
+  display: none !important;
+}
+
+.swiper {
+  width: 100%;
+  height: 450px;
+  margin-top: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.swiper .swiper-slide {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h3 {
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  margin: 100px 0 50px 0;
+  font-family: "Julius Sans One";
+}
+
+#beverages .swiper h2 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-family: "Kaushan Script", cursive;
+  z-index: 999;
+}
+#beverages .swiper .beverage-1 {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/beverage1.jpg");
+}
+#beverages .swiper .beverage-2 {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/beverage2.jpg");
+  background-position: center 40%;
+}
+#beverages .swiper .beverage-3 {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/beverage3.jpg");
+  background-position: center 35%;
+}
+#beverages h3 {
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  margin: 100px 0 50px 0;
+  font-family: "Julius Sans One";
+}
+#beverages .menu-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin: 0 50px;
+  gap: 75px;
+}
+#beverages .menu-wrapper .item {
+  display: flex;
+  gap: 25px;
+  padding: 0 0 75px 0;
+  border-bottom: 1px solid white;
+}
+#beverages .menu-wrapper .item .item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#beverages .menu-wrapper .item img {
+  display: block;
+  height: 175px;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#beverages .menu-wrapper .item h4 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+#beverages .menu-wrapper .item p {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+#beverages .menu-wrapper .item h5 {
+  color: burlywood;
+  font-size: 28px;
+  font-family: "Julius Sans One";
+}
+
+#desserts .swiper {
+  margin-top: 150px !important;
+}
+#desserts .swiper h2 {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 100px;
+  font-family: "Kaushan Script", cursive;
+  z-index: 999;
+}
+#desserts .swiper .dessert-1 {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/dessert1.jpg");
+}
+#desserts .swiper .dessert-2 {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/dessert2.jpg");
+  background-position: center 70%;
+}
+#desserts .swiper .dessert-3 {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("assets/dessert3.jpg");
+  background-position: center center;
+}
+#desserts h3 {
+  color: white;
+  text-align: center;
+  font-size: 32px;
+  margin: 100px 0 50px 0;
+  font-family: "Julius Sans One";
+}
+#desserts .menu-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  margin: 0 50px;
+  gap: 75px;
+}
+#desserts .menu-wrapper .item {
+  display: flex;
+  gap: 25px;
+  padding: 0 0 75px 0;
+  border-bottom: 1px solid white;
+}
+#desserts .menu-wrapper .item .item-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#desserts .menu-wrapper .item img {
+  display: block;
+  width: 175px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+#desserts .menu-wrapper .item h4 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+#desserts .menu-wrapper .item p {
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+}
+#desserts .menu-wrapper .item h5 {
+  color: burlywood;
+  font-size: 28px;
+  font-family: "Julius Sans One";
+}
+
+#action {
+  margin: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#action .order-now {
+  color: #1A1A1A;
+  background-color: burlywood;
+  border-radius: 2px;
+  padding: 20px 65px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Julius Sans One";
+  transition: all 0.25s ease;
+}
+#action .order-now:hover {
+  color: white;
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+
+footer {
+  font-family: "Montserrat", sans-serif;
+  padding: 0 50px;
+}
+footer .footer-wrapper {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 0;
+  border-bottom: 1px solid white;
+}
+footer .footer-top {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+footer img {
+  width: 300px;
+}
+footer .footer-header {
+  font-size: 18px;
+  font-weight: 300;
+}
+footer .footer-desc {
+  color: white;
+  font-weight: 300;
+  text-align: justify;
+  text-justify: inter-word;
+  gap: 50px;
+}
+footer .footer-nav {
+  color: white;
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+}
+footer .footer-nav ul {
+  margin-top: 40px;
+  gap: 40px;
+}
+footer .footer-nav a {
+  font-size: 16px;
+  font-weight: 200;
+  color: white;
+  text-decoration: none;
+  transition: all 0.125s ease-in-out;
+}
+footer .footer-nav a:hover {
+  color: burlywood;
+  transition: all 0.125s ease-in-out;
+}
+footer .socials {
+  color: white;
+  align-items: flex-end;
+}
+footer .socials .social-list {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+footer .socials .social-list a {
+  color: burlywood;
+  text-decoration: none;
+  align-self: flex-end;
+}
+footer .socials .social-list a i {
+  margin-right: 10px;
+}
+footer .location {
+  color: white;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+footer .location i {
+  font-size: 22px;
+}
+footer .copyright {
+  color: white;
+  margin: 50px 0;
+  text-align: center;
+  font-weight: 300;
+}
+
+@media only screen and (max-width: 1024px) {
+  nav a {
+    padding: 20.8333333333px 46.4285714286px;
+  }
+  footer .footer-wrapper {
+    height: auto;
+    gap: 100px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  nav a {
+    padding: 20.8333333333px 40.625px;
+  }
+  footer .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    gap: 25px;
+  }
+  footer .footer-desc p {
+    font-size: 14px;
+  }
+  footer .footer-header {
+    font-size: 16px;
+  }
+  footer .footer-nav {
+    gap: 25px;
+  }
+  footer .socials .social-list a {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 640px) {
+  nav {
+    justify-content: space-between;
+  }
+  nav .nav-wide {
+    display: none;
+  }
+  nav .list-button {
+    padding: 20.8333333333px 40.625px;
+  }
+  nav .offcanvas-header {
+    padding: 20.8333333333px 16px;
+  }
+  nav .navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    display: block !important;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: auto;
+    margin: 20.8333333333px 40.625px;
+  }
+  nav .navbar-logo img {
+    width: 100%;
+  }
+  nav button {
+    font-size: 24px;
+    color: burlywood !important;
+    display: inline-block !important;
+  }
+  nav .offcanvas img {
+    width: 186px;
+  }
+  nav .offcanvas button {
+    color: burlywood !important;
+    font-size: 36px;
+  }
+  nav .offcanvas-body ul {
+    display: flex;
+    flex-direction: column;
+  }
+  nav .offcanvas-body ul a {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  footer .footer-top {
+    display: grid;
+    grid-template: "desc desc" "nav social";
+    row-gap: 50px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+  footer img {
+    width: 200px;
+  }
+  footer .footer-desc {
+    grid-area: desc;
+  }
+  footer .footer-nav {
+    grid-area: nav;
+    justify-content: flex-start;
+  }
+  footer .socials {
+    grid-area: social;
+  }
+}
+@media only screen and (max-width: 480px) {
+  footer {
+    padding: 0 20px;
+  }
+  footer .footer-top {
+    display: grid;
+    grid-template: "desc" "nav" "social";
+    row-gap: 50px;
+    -moz-column-gap: 25px;
+         column-gap: 25px;
+  }
+  footer img {
+    width: 200px;
+  }
+  footer .footer-desc {
+    grid-area: desc;
+  }
+  footer .footer-nav {
+    grid-area: nav;
+    justify-content: flex-start;
+    gap: 50px;
+  }
+  footer .socials {
+    align-items: flex-start;
+  }
+  footer .socials .social-list {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  footer .socials .social-list a {
+    align-self: flex-start;
+  }
+}/*# sourceMappingURL=menu.css.map */
