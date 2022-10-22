@@ -88,17 +88,6 @@ nav {
         background-repeat: no-repeat;
         background-position: center;
     }
-
-    h2 {
-        color: white;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 100px;
-        font-family: 'Kaushan Script', cursive;
-        z-index: 999;
-    }
 }
 
 h3 {
@@ -109,55 +98,19 @@ h3 {
     font-family: 'Julius Sans One';
 }
 
-.menu-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    margin: 0 50px;
-    gap: 75px;
-
-    .item {
-        display: flex;
-        gap: 25px;
-        padding: 0 0 75px 0;
-        border-bottom: 1px solid white;
-
-        .item-desc {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        img {
-            display: block;
-            height: 175px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        h4 {
-            color: white;
-            font-size: 24px;
-            font-weight: 300;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        p {
-            color: white;
-            font-size: 14px;
-            font-weight: 300;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        h5 {
-            color: $accent-color;
-            font-size: 28px;
-            font-family: 'Julius Sans One';
-        }
-    }
-}
-
 #beverages {
     .swiper {
+        h2 {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            font-family: 'Kaushan Script', cursive;
+            z-index: 999;
+        }
+
         .beverage-1 {
             background-image: linear-gradient(90deg,
                     rgba(0, 0, 0, 0.2),
@@ -181,31 +134,153 @@ h3 {
             background-position: center 35%;
         }
     }
+
+    h3 {
+        color: white;
+        text-align: center;
+        font-size: 32px;
+        margin: 100px 0 50px 0;
+        font-family: 'Julius Sans One';
+    }
+
+    .menu-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        margin: 0 50px;
+        gap: 75px;
+
+        .item {
+            display: flex;
+            gap: 25px;
+            padding: 0 0 75px 0;
+            border-bottom: 1px solid white;
+
+            .item-desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            img {
+                display: block;
+                height: 175px;
+                width: auto;
+                object-fit: contain;
+            }
+
+            h4 {
+                color: white;
+                font-size: 24px;
+                font-weight: 300;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            p {
+                color: white;
+                font-size: 14px;
+                font-weight: 300;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            h5 {
+                color: $accent-color;
+                font-size: 28px;
+                font-family: 'Julius Sans One';
+            }
+        }
+    }
 }
 
 #desserts {
     .swiper {
+        margin-top: 150px !important;
+        h2 {
+            color: white;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 100px;
+            font-family: 'Kaushan Script', cursive;
+            z-index: 999;
+        }
+
         .dessert-1 {
             background-image: linear-gradient(90deg,
                     rgba(0, 0, 0, 0.2),
                     rgba(0, 0, 0, 0.2)),
-                url('assets/beverage1.jpg');
+                url('assets/dessert1.jpg');
         }
 
         .dessert-2 {
             background-image: linear-gradient(90deg,
                     rgba(0, 0, 0, 0.2),
                     rgba(0, 0, 0, 0.2)),
-                url('assets/beverage2.jpg');
-            background-position: center 40%;
+                url('assets/dessert2.jpg');
+            background-position: center 70%;
         }
 
         .dessert-3 {
             background-image: linear-gradient(90deg,
                     rgba(0, 0, 0, 0.2),
                     rgba(0, 0, 0, 0.2)),
-                url('assets/beverage3.jpg');
-            background-position: center 35%;
+                url('assets/dessert3.jpg');
+            background-position: center center;
+        }
+    }
+
+    h3 {
+        color: white;
+        text-align: center;
+        font-size: 32px;
+        margin: 100px 0 50px 0;
+        font-family: 'Julius Sans One';
+    }
+
+    .menu-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        margin: 0 50px;
+        gap: 75px;
+
+        .item {
+            display: flex;
+            gap: 25px;
+            padding: 0 0 75px 0;
+            border-bottom: 1px solid white;
+
+            .item-desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            img {
+                display: block;
+                height: 175px;
+                width: auto;
+                object-fit: contain;
+            }
+
+            h4 {
+                color: white;
+                font-size: 24px;
+                font-weight: 300;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            p {
+                color: white;
+                font-size: 14px;
+                font-weight: 300;
+                font-family: 'Montserrat', sans-serif;
+            }
+
+            h5 {
+                color: $accent-color;
+                font-size: 28px;
+                font-family: 'Julius Sans One';
+            }
         }
     }
 }
