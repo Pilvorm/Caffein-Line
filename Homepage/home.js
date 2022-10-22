@@ -1,3 +1,14 @@
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-150px";
+  }
+  prevScrollpos = currentScrollPos;
+};
+
 var mainScrollArea = document.getElementsByClassName('mdl-layout__content')[0];
 var scrollTimeout;
 
@@ -17,13 +28,3 @@ mainScrollArea.addEventListener('scroll', function() {
   }, 100)
 });
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-150px";
-  }
-  prevScrollpos = currentScrollPos;
-};
