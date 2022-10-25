@@ -1,5 +1,5 @@
 # Caffein Line - [Live Preview](https://caffeinline.netlify.app/)
-A tool to preview your markdown in real-time.
+An online cafe landing page.
 
 ![Caffein Line](https://user-images.githubusercontent.com/86703782/197682526-38ce7444-4e48-4b33-9eb4-0bd1bf5b6037.png)
 
