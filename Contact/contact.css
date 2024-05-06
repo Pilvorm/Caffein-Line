@@ -392,13 +392,13 @@ footer .copyright {
     font-size: 20px;
   }
   #info-section h3,
-#socials h3 {
+  #socials h3 {
     font-size: 20px;
   }
   #info-section p,
-#info-section a,
-#socials p,
-#socials a {
+  #info-section a,
+  #socials p,
+  #socials a {
     font-size: 20px;
   }
   #socials {

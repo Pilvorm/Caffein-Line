@@ -1,271 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/png" href="../Icon/android-chrome-192x192.png" sizes="192x192" />
-    <link rel="icon" type="image/png" href="../Icon/android-chrome-512x512.png" sizes="512x512" />
-    <link rel="icon" type="image/png" href="../Icon/favicon-16x16.png" sizes="16x16" />
-    <link rel="icon" type="image/png" href="../Icon/favicon-32x32.png" sizes="32x32" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../Icon/android-chrome-192x192.png"
+      sizes="192x192"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../Icon/android-chrome-512x512.png"
+      sizes="512x512"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../Icon/favicon-16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../Icon/favicon-32x32.png"
+      sizes="32x32"
+    />
 
     <title>Menu - Caffein Line</title>
-    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="menu.css" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com/3.3.0"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
     <nav id="navbar">
-        <a href="../home.html" class="nav-wide">HOME</a>
-        <a href="../home.html#about" class="nav-wide">ABOUT</a>
-        <a href="#" class="current-nav nav-wide">MENU</a>
-        <a href="../home.html#event" class="nav-wide">EVENT</a>
-        <a href="../Contact/contact.html" class="nav-wide">CONTACT</a>
+      <a href="../home.html" class="nav-wide">HOME</a>
+      <a href="../home.html#about" class="nav-wide">ABOUT</a>
+      <a href="#" class="current-nav nav-wide">MENU</a>
+      <a href="../home.html#event" class="nav-wide">EVENT</a>
+      <a href="../Contact/contact.html" class="nav-wide">CONTACT</a>
 
-        <div class="navbar-logo">
-            <img src="../assets/logo.png" alt="">
-        </div>
-        <button class="block" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-            aria-controls="offcanvasRight"><i class="bi bi-list list-button"></i></button>
+      <div class="navbar-logo">
+        <img src="../assets/logo.png" alt="" />
+      </div>
+      <button
+        class="block"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight"
+        aria-controls="offcanvasRight"
+      >
+        <i class="bi bi-list list-button"></i>
+      </button>
 
-        <div class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-[#1A1A1A] invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-white top-0 right-0 border-none w-96"
-            tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header flex items-center justify-between">
-                <img src="../assets/logo.png" alt="">
-                <button type="button" class="btn-close box-content" data-bs-dismiss="offcanvas" aria-label="Close"><i
-                        class="bi bi-x x-button"></i></button>
-            </div>
-            <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
-                <ul>
-                    <a href="../home.html" class="">HOME</a>
-                    <a href="../home.html#about" class="">ABOUT</a>
-                    <a href="#" class="current-nav">MENU</a>
-                    <a href="../home.html#event" class="">EVENT</a>
-                    <a href="../Contact/contact.html" class="">CONTACT</a>
-                </ul>
-            </div>
+      <div
+        class="offcanvas offcanvas-end fixed bottom-0 flex flex-col max-w-full bg-[#1A1A1A] invisible bg-clip-padding shadow-sm outline-none transition duration-300 ease-in-out text-white top-0 right-0 border-none w-96"
+        tabindex="-1"
+        id="offcanvasRight"
+        aria-labelledby="offcanvasRightLabel"
+      >
+        <div class="offcanvas-header flex items-center justify-between">
+          <img src="../assets/logo.png" alt="" />
+          <button
+            type="button"
+            class="btn-close box-content"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          >
+            <i class="bi bi-x x-button"></i>
+          </button>
         </div>
+        <div class="offcanvas-body flex-grow p-4 overflow-y-auto">
+          <ul>
+            <a href="../home.html" class="">HOME</a>
+            <a href="../home.html#about" class="">ABOUT</a>
+            <a href="#" class="current-nav">MENU</a>
+            <a href="../home.html#event" class="">EVENT</a>
+            <a href="../Contact/contact.html" class="">CONTACT</a>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div id="beverages" class="section">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide beverage-1"></div>
-                <div class="swiper-slide beverage-2"></div>
-                <div class="swiper-slide beverage-3"></div>
-            </div>
-            <h2>BEVERAGES</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide beverage-1"></div>
+          <div class="swiper-slide beverage-2"></div>
+          <div class="swiper-slide beverage-3"></div>
+        </div>
+        <h2>BEVERAGES</h2>
+      </div>
+
+      <h3>COFFEE</h3>
+
+      <div class="menu-wrapper">
+        <div class="item">
+          <img src="assets/coffee.png" alt="" />
+          <div class="item-desc">
+            <h4>Americano</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$4</h5>
+          </div>
         </div>
 
-        <h3>COFFEE</h3>
-
-        <div class="menu-wrapper">
-            <div class="item">
-                <img src="assets/coffee.png" alt="">
-                <div class="item-desc">
-                    <h4>Americano</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$4</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/coffee.png" alt="">
-                <div class="item-desc">
-                    <h4>Americano</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$4</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/coffee.png" alt="">
-                <div class="item-desc">
-                    <h4>Americano</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$4</h5>
-                </div>
-            </div>
+        <div class="item">
+          <img src="assets/coffee.png" alt="" />
+          <div class="item-desc">
+            <h4>Americano</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$4</h5>
+          </div>
         </div>
 
-        <h3>TEA</h3>
-
-        <div class="menu-wrapper">
-            <div class="item">
-                <img src="assets/earl.png" alt="">
-                <div class="item-desc">
-                    <h4>Earl Grey</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$3</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/raspberry.png" alt="">
-                <div class="item-desc">
-                    <h4>Raspberry Nectar</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$3</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/jasmine.png" alt="">
-                <div class="item-desc">
-                    <h4>Jasmine</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$3</h5>
-                </div>
-            </div>
+        <div class="item">
+          <img src="assets/coffee.png" alt="" />
+          <div class="item-desc">
+            <h4>Americano</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$4</h5>
+          </div>
         </div>
+      </div>
+
+      <h3>TEA</h3>
+
+      <div class="menu-wrapper">
+        <div class="item">
+          <img src="assets/earl.png" alt="" />
+          <div class="item-desc">
+            <h4>Earl Grey</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$3</h5>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/raspberry.png" alt="" />
+          <div class="item-desc">
+            <h4>Raspberry Nectar</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$3</h5>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/jasmine.png" alt="" />
+          <div class="item-desc">
+            <h4>Jasmine</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$3</h5>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="desserts" class="section">
-        <div class="swiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide dessert-1"></div>
-                <div class="swiper-slide dessert-2"></div>
-                <div class="swiper-slide dessert-3"></div>
-            </div>
-            <h2>DESSERTS</h2>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide dessert-1"></div>
+          <div class="swiper-slide dessert-2"></div>
+          <div class="swiper-slide dessert-3"></div>
+        </div>
+        <h2>DESSERTS</h2>
+      </div>
+
+      <h3>DESSERTS</h3>
+
+      <div class="menu-wrapper">
+        <div class="item">
+          <img src="assets/cake2.png" alt="" />
+          <div class="item-desc">
+            <h4>Tiramisu Cheesecake</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$7</h5>
+          </div>
         </div>
 
-        <h3>DESSERTS</h3>
-
-        <div class="menu-wrapper">
-            <div class="item">
-                <img src="assets/cake2.png" alt="">
-                <div class="item-desc">
-                    <h4>Tiramisu Cheesecake</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$7</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/waffle.png" alt="">
-                <div class="item-desc">
-                    <h4>Waffles</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$7</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/icecream.png" alt="">
-                <div class="item-desc">
-                    <h4>Ice Cream</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$7</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/churros.png" alt="">
-                <div class="item-desc">
-                    <h4>Churros</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$7</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/donuts.png" alt="">
-                <div class="item-desc">
-                    <h4>Donuts</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$7</h5>
-                </div>
-            </div>
-
-            <div class="item">
-                <img src="assets/macaroons.png" alt="">
-                <div class="item-desc">
-                    <h4>Macaroons</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae odio voluptatibus neque exercitationem</p>
-                    <h5>$7</h5>
-                </div>
-            </div>
+        <div class="item">
+          <img src="assets/waffle.png" alt="" />
+          <div class="item-desc">
+            <h4>Waffles</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$7</h5>
+          </div>
         </div>
+
+        <div class="item">
+          <img src="assets/icecream.png" alt="" />
+          <div class="item-desc">
+            <h4>Ice Cream</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$7</h5>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/churros.png" alt="" />
+          <div class="item-desc">
+            <h4>Churros</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$7</h5>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/donuts.png" alt="" />
+          <div class="item-desc">
+            <h4>Donuts</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$7</h5>
+          </div>
+        </div>
+
+        <div class="item">
+          <img src="assets/macaroons.png" alt="" />
+          <div class="item-desc">
+            <h4>Macaroons</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Recusandae odio voluptatibus neque exercitationem
+            </p>
+            <h5>$7</h5>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div id="action">
-        <a href="../Payment/payment.html" class="order-now">ORDER NOW</a>
+      <a href="../Payment/payment.html" class="order-now">ORDER NOW</a>
     </div>
 
     <footer>
-        <div class="footer-wrapper">
-            <div class="footer-top">
-                <div class="footer-desc">
-                    <a href="#"><img src="../assets/logo.png" alt=""></a>
-                    <p>Caffein Line is an online cafe based in Florida. We provide the best beverages and desserts
-                        with the best
-                        quality of ingredients and we make sure everything is kept well and fresh.</p>
-                </div>
+      <div class="footer-wrapper">
+        <div class="footer-top">
+          <div class="footer-desc">
+            <a href="#"><img src="../assets/logo.png" alt="" /></a>
+            <p>
+              Caffein Line is an online cafe based in Florida. We provide the
+              best beverages and desserts with the best quality of ingredients
+              and we make sure everything is kept well and fresh.
+            </p>
+          </div>
 
-                <div class="footer-nav">
-                    <div class="footer-category products">
-                        <p class="footer-header">Products</p>
-                        <ul>
-                            <a href="">Beverages</a>
-                            <a href="">Desserts</a>
-                            <a href="">Breakfast</a>
-                        </ul>
-                    </div>
-                    <div class="footer-category other">
-                        <p class="footer-header">Navigate</p>
-                        <ul>
-                            <a href="">Privacy</a>
-                            <a href="">Terms</a>
-                            <a href="">Contact</a>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="socials">
-                    <p class="footer-header">Our Socials</p>
-                    <div class="social-list">
-                        <a href=""><i class="bi bi-instagram"></i> @caffeinline</a>
-                        <a href=""><i class="bi bi-twitter"></i> @caffeinline</a>
-                        <a href=""><i class="bi bi-youtube"></i> Caffein Line</a>
-
-                    </div>
-                </div>
+          <div class="footer-nav">
+            <div class="footer-category products">
+              <p class="footer-header">Products</p>
+              <ul>
+                <a href="">Beverages</a>
+                <a href="">Desserts</a>
+                <a href="">Breakfast</a>
+              </ul>
             </div>
-            <div class="footer-bottom">
-                <a href="https://goo.gl/maps/QYC9vJYCHrubidxj7" target="_blank" class="location">
-                    <i class="bi bi-geo-alt"></i>
-                    <p>Sattelite Beach, Florida (FL), 230502</p>
-                </a>
+            <div class="footer-category other">
+              <p class="footer-header">Navigate</p>
+              <ul>
+                <a href="">Privacy</a>
+                <a href="">Terms</a>
+                <a href="">Contact</a>
+              </ul>
             </div>
+          </div>
+
+          <div class="socials">
+            <p class="footer-header">Our Socials</p>
+            <div class="social-list">
+              <a href=""><i class="bi bi-instagram"></i> @caffeinline</a>
+              <a href=""><i class="bi bi-twitter"></i> @caffeinline</a>
+              <a href=""><i class="bi bi-youtube"></i> Caffein Line</a>
+            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <a
+            href="https://goo.gl/maps/QYC9vJYCHrubidxj7"
+            target="_blank"
+            class="location"
+          >
+            <i class="bi bi-geo-alt"></i>
+            <p>Sattelite Beach, Florida (FL), 230502</p>
+          </a>
+        </div>
+      </div>
 
-        <p class="copyright">&copy; 2021 Caffein Line. All rights reserved</p>
+      <p class="copyright">&copy; 2021 Caffein Line. All rights reserved</p>
     </footer>
 
     <script src="menu.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/js/index.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            speed: 1000,
-            autoplay: {
-                delay: 5000,
-            }
-        });
+      const swiper = new Swiper(".swiper", {
+        loop: true,
+        speed: 1000,
+        autoplay: {
+          delay: 5000,
+        },
+      });
     </script>
-</body>
-
+  </body>
 </html>

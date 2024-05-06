@@ -342,7 +342,7 @@ footer .copyright {
     font-size: 24px;
   }
   #event .event-1,
-#event .event-3 {
+  #event .event-3 {
     font-size: 42px;
   }
   footer .footer-top {
@@ -451,7 +451,7 @@ footer .copyright {
     margin-bottom: 25px;
   }
   #event .swiper-button-prev,
-#event .swiper-button-next {
+  #event .swiper-button-next {
     display: none;
   }
   #event .event-1 {
